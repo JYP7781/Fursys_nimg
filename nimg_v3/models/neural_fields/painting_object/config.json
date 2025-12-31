@@ -1,0 +1,14 @@
+{
+  "num_iterations": 1000,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "hidden_dim": 128,
+  "num_layers": 4,
+  "use_positional_encoding": true,
+  "positional_encoding_dim": 6,
+  "num_samples_per_ray": 64,
+  "near_plane": 0.1,
+  "far_plane": 3.0,
+  "marching_cubes_resolution": 128,
+  "iso_level": 0.0
+}

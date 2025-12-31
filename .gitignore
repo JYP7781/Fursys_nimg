@@ -1,0 +1,58 @@
+# ===========================================
+# nimg_v2, nimg_v3 Git Ignore
+# ===========================================
+
+# nimg 폴더 제외 (v2, v3만 포함)
+nimg/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# 모델 파일 (대용량) - 별도 다운로드 필요
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.h5
+*.onnx
+*.trt
+
+# 테스트 결과 및 출력
+test_result/
+output/
+*.log
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# pytest
+.pytest_cache/
+.cache/
+htmlcov/
+.coverage
+
+# 기타
+*.bak
+*.tmp

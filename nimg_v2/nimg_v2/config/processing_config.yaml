@@ -1,0 +1,51 @@
+# Processing Configuration for nimg_v2
+
+# 일반 설정
+general:
+  fps: 30  # 기본 프레임 레이트
+  reference_frame_idx: 0  # 기준 프레임 인덱스
+  max_frames: null  # 처리할 최대 프레임 수 (null = 전체)
+
+# YOLO 탐지기 설정
+detector:
+  model_path: "./models/class187_image85286_v12x_250epochs.pt"
+  conf_threshold: 0.5  # 신뢰도 임계값
+  iou_threshold: 0.45  # NMS IoU 임계값
+  max_detections: 1000  # 최대 탐지 개수
+  device: "auto"  # cuda, cpu, or auto
+
+# Kalman Filter 설정
+kalman_filter:
+  dt: 0.0333  # 시간 간격 (1/30 초)
+  process_noise: 0.1  # 프로세스 노이즈
+  measurement_noise_base: 0.005  # 기본 측정 노이즈 (1m에서)
+  acceleration_noise_multiplier: 10  # 가속도 노이즈 배율
+
+# 위치 추정 설정
+position_estimation:
+  margin: 5  # ROI 마진 (pixels)
+  min_valid_depth_ratio: 0.3  # 최소 유효 depth 비율
+
+# 방향 추정 설정 (PCA/OBB)
+orientation_estimation:
+  min_points: 100  # 최소 포인트 수
+  outlier_nb_neighbors: 20  # 이상치 제거용 이웃 수
+  outlier_std_ratio: 2.0  # 이상치 표준편차 비율
+
+# Point Cloud 처리 설정
+point_cloud:
+  voxel_size: 0.005  # 다운샘플링 voxel 크기 (m)
+  statistical_outlier_nb_neighbors: 20
+  statistical_outlier_std_ratio: 2.0
+
+# 출력 설정
+output:
+  save_csv: true
+  save_json: true
+  save_visualization: true
+  visualization_format: "png"  # png, svg, pdf
+
+# 로깅 설정
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  progress_interval: 100  # 진행 로그 출력 간격 (프레임)

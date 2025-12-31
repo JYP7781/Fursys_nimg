@@ -1,0 +1,16 @@
+{
+  "object_name": "painting_object",
+  "training_stats": {
+    "num_images": 14,
+    "image_size": [
+      480,
+      640
+    ],
+    "num_iterations": 1000,
+    "training_time": 0.0001266002655029297,
+    "final_loss": 0.0,
+    "sdf_loss": 0.0,
+    "rgb_loss": 0.0
+  },
+  "trained": true
+}

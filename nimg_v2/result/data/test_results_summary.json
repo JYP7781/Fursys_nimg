@@ -1,0 +1,48 @@
+{
+  "test_info": {
+    "start_time": "2025-12-24T12:56:11.732104",
+    "end_time": "2025-12-24T12:56:20.123122",
+    "model_path": "/root/fursys_imgprosessing_ws/models/class187_image85286_v12x_250epochs.pt",
+    "data_dirs": [
+      "/root/fursys_imgprosessing_ws/src/nimg/img_data/20240525",
+      "/root/fursys_imgprosessing_ws/src/nimg/img_data/20240529"
+    ],
+    "intrinsics": {
+      "fx": 636.3392652788157,
+      "fy": 636.4266464742717,
+      "cx": 654.3418233071645,
+      "cy": 399.58963414918554
+    }
+  },
+  "summary": {
+    "total_detections": 5,
+    "total_positions": 5,
+    "total_orientations": 5,
+    "kalman_frames": 99,
+    "change_frames": 30
+  },
+  "statistics": {
+    "detection": {
+      "total_count": 5,
+      "unique_classes": 2,
+      "avg_confidence": 0.5413920938968658,
+      "max_confidence": 0.808593213558197,
+      "avg_inference_time_ms": 25.413227081298828,
+      "class_distribution": {
+        "A011M413": 3,
+        "A011B0084": 2
+      }
+    },
+    "kalman": {
+      "avg_error_mm": 14.913699298410418,
+      "max_error_mm": 38.263555363138735,
+      "final_velocity_x": 0.3682352504839767,
+      "avg_speed": 0.3006143935617797
+    },
+    "change": {
+      "max_distance": 0.30000000000000004,
+      "max_total_rotation": 18.49324200890693,
+      "avg_speed": 0.30000000000000004
+    }
+  }
+}

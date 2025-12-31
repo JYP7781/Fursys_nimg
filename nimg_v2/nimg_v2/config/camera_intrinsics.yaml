@@ -1,0 +1,36 @@
+# D455 Camera Intrinsics Configuration
+# 실제 캘리브레이션 결과로 업데이트 필요
+
+camera:
+  name: "Intel RealSense D455"
+  resolution:
+    width: 1280
+    height: 720
+
+  # 카메라 내부 파라미터 (from Calibration_result_d455.yaml)
+  intrinsics:
+    fx: 636.3392652788157  # focal length x (pixels)
+    fy: 636.4266464742717  # focal length y (pixels)
+    cx: 654.3418233071645  # principal point x (pixels)
+    cy: 399.58963414918554  # principal point y (pixels)
+
+  # 왜곡 계수 (Distortion Coefficients)
+  distortion:
+    k1: -0.0674558491814021
+    k2: 0.07674552916772615
+    p1: -0.002874904836627887
+    p2: 0.0011617524486503162
+    k3: -0.029358499256325468
+
+  # Depth 센서 설정
+  depth:
+    scale: 0.001  # depth 값을 미터로 변환 (16-bit PNG에서)
+    min_distance: 0.1  # 최소 유효 거리 (m)
+    max_distance: 10.0  # 최대 유효 거리 (m)
+    baseline: 0.095  # 스테레오 baseline (m) - D455
+
+# IMU 설정
+imu:
+  enabled: true
+  accel_noise_density: 0.001  # m/s^2 / sqrt(Hz)
+  gyro_noise_density: 0.0001  # rad/s / sqrt(Hz)
